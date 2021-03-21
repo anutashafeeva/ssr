@@ -4,14 +4,8 @@ import { connect } from 'react-redux';
 
 import Movie from './Movie.js';
 
-class MovieList extends React.Component {
+const MovieList = (props) => {
   
-  static getInitialProps({store}) {}
-
-    constructor(props) {
-        super(props);
-    }
-    render() {
   return(
     <div className='movies-list'>
       {props.movies.map((movie) => (
@@ -21,7 +15,7 @@ class MovieList extends React.Component {
         />
       ))}
     </div>
-  );}
+  );
 }
 
 MovieList.propTypes = {

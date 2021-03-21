@@ -22,7 +22,7 @@ const Movies = (props) => {
       <div className='wrapper'>
         <SearchOptions/>
 
-          {1 || asPath.match(/film\/.+/) || asPath.match(/search\/.*/)
+          {asPath.match(/search.*/)
           ?
           <>
             <div className='founded-movies'><span>{props.movies.totalAmount}</span> movies found</div>

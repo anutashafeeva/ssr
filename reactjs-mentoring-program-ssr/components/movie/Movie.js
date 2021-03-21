@@ -21,9 +21,9 @@ const Movie = (props) => {
       <button className='grey-button' type='button' onClick={() => props.openDeleteModal(props.movie.id)}>DELETE</button>
         <Delete/>
       </span>
-      <Link href={`/film/${props.movie.id}`}>
-        <img onClick={() => props.openMovieCard(props.movie.id)} className='movie-image' src={props.movie.poster_path} onError={(e) => {e.target.onerror = null; e.target.src=notFound}} alt='Movie image'></img>
-      </Link>
+      {/* <Link href={`/film/${props.movie.id}`}> */}
+        <img className='movie-image' src={props.movie.poster_path} onError={(e) => {e.target.onerror = null; e.target.src=notFound}} alt='Movie image'></img>
+      {/* </Link> */}
       <span className='movie-content'>
         <span className='movie-data'>
           <h3 className='movie-title'>{props.movie.title}</h3>

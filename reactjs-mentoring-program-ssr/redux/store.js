@@ -1,3 +1,4 @@
+import { createWrapper } from 'next-redux-wrapper';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
@@ -17,6 +18,6 @@ const initialState = {
     isEditOpen: false
 };
 
-const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
+const makeStore = (context) => createStore(rootReducer, initialState, applyMiddleware(thunk));
 
-export default store;
+export const wrapper = createWrapper(makeStore);
